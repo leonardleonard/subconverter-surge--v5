@@ -77,8 +77,10 @@ const std::vector<UAProfile> UAMatchList = {
     {"Qv2ray","","","v2ray"},
     {"Shadowrocket","","","mixed"},
     {"Surfboard","","","surfboard"},
+    {"Surge","\\/([0-9.]+).*x86","3000","surge",false,6}, /// Surge 6 for Mac
     {"Surge","\\/([0-9.]+).*x86","906","surge",false,4}, /// Surge for Mac (supports VMess)
     {"Surge","\\/([0-9.]+).*x86","368","surge",false,3}, /// Surge for Mac (supports new rule types and Shadowsocks without plugin)
+    {"Surge","\\/([0-9.]+)","3000","surge",false,6}, /// Surge 6 iOS
     {"Surge","\\/([0-9.]+)","1419","surge",false,4}, /// Surge iOS 4 (first version)
     {"Surge","\\/([0-9.]+)","900","surge",false,3}, /// Surge iOS 3 (approx)
     {"Surge","","","surge",false,2}, /// any version of Surge as fallback

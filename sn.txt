@@ -1,0 +1,18 @@
+
+# 1. 部署应用
+fly launch
+fly deploy
+
+# 2. 查看 IP 地址
+fly ips list
+
+采用 dns部署
+
+# 3. 添加自定义域名证书
+fly certs add convert-api-v2.neonets.top
+
+# 4. 查看 DNS 配置说明
+fly certs show convert-api-v2.neonets.top
+
+# 5. 检查证书状态
+fly certs check convert-api-v2.neonets.top

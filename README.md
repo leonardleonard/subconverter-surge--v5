@@ -2,7 +2,7 @@
 
 最新使用说明文档：[https://www.inextops.com/tools/sub/](https://www.inextops.com/tools/sub/)
 
-本仓库Fork了[tindy2013/subconverter](https://github.com/tindy2013/subconverter)的代码，增加了对Surge 5的支持。因为Surge 5的配置文件格式与Surge 4不同，所以需要修改代码，增加了`surge-ios`和`surge-macos`两个参数，用于区分Surge 5的配置文件格式。
+本仓库Fork了[tindy2013/subconverter](https://github.com/tindy2013/subconverter)的代码，增加了对Surge 5/6的支持。因为Surge 5的配置文件格式与Surge 4不同，所以需要修改代码，增加了`surge-ios`和`surge-macos`两个参数，用于区分Surge 5的配置文件格式。Surge 6 支持通过 `surge&ver=6` 参数使用，保持了与 Surge 4/5 的兼容性。
 
 [![Build Status](https://github.com/tindy2013/subconverter/actions/workflows/build.yml/badge.svg)](https://github.com/tindy2013/subconverter/actions)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/tindy2013/subconverter.svg)](https://github.com/tindy2013/subconverter/tags)
@@ -61,6 +61,7 @@
 |---------------| :---: | :----: |-------------------|
 | Surge 5 IOS   |   ✓   |    ✓   | surge-ios&ver=5   |
 | Surge 5 MacOS |   ✓   |    ✓   | surge-macos&ver=5 |
+| Surge 6       |   ✓   |    ✓   | surge&ver=6       |
 
 
 ## 配置文件详解
