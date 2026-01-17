@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for subconverter-surge-v5-polished-thunder-2647 on 2026-01-17T02:55:56+08:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'subconverter-surge-v5-polished-thunder-2647'
+primary_region = 'lax'
+
+[build]
+
+[http_service]
+  internal_port = 25500
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpus = 1
+  memory_mb = 1024

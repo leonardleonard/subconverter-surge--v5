@@ -1,0 +1,32 @@
+--- a/include/quickjspp.hpp
++++ b/include/quickjspp.hpp
+@@ -402,6 +402,12 @@ namespace qjs {
+             case JS_TAG_INT:
+                 return std::is_integral_v<T> || std::is_floating_point_v<T>;
+             case JS_TAG_BOOL:
+                 return is_boolean<T>::value || std::is_integral_v<T> || std::is_floating_point_v<T>;
+ 
++#ifdef JS_TAG_BIG_DECIMAL
+             case JS_TAG_BIG_DECIMAL:
+                 [[fallthrough]];
++#endif
++#ifdef JS_TAG_BIG_FLOAT
+             case JS_TAG_BIG_FLOAT:
+                 [[fallthrough]];
++#endif
+             case JS_TAG_FLOAT64:
+             default: // >JS_TAG_FLOAT64 (JS_NAN_BOXING)
+@@ -473,6 +479,12 @@ namespace qjs {
+             case JS_TAG_BIG_INT:
+                 // TODO?
+                 throw exception{ctx};
++#ifdef JS_TAG_BIG_DECIMAL
+             case JS_TAG_BIG_DECIMAL:
+                 [[fallthrough]];
++#endif
++#ifdef JS_TAG_BIG_FLOAT
+             case JS_TAG_BIG_FLOAT:
+                 [[fallthrough]];
++#endif
+             case JS_TAG_FLOAT64:
+             default: // >JS_TAG_FLOAT64 (JS_NAN_BOXING)
